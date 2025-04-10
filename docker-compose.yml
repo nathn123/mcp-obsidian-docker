@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  mcp-obsidian:
+    build: .
+    container_name: mcp-obsidian
+    environment:
+      - OBSIDIAN_API_KEY=${OBSIDIAN_API_KEY}
+    ports:
+      - "27124:27124"  # Default port for Obsidian Local REST API
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped 

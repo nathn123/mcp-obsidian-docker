@@ -16,4 +16,4 @@ COPY . .
 ENV PYTHONUNBUFFERED=1
 
 # Command to run the server
-CMD ["python", "-m", "mcp_obsidian"]
+CMD ["mcp-obsidian"]
